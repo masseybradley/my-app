@@ -1,0 +1,13 @@
+div.entities {
+    margin-top: 1em;
+    background-color: darkgrey;
+    color: black;
+}
+div.entities div.even {
+    font-size: 1em;
+    background-color: darkblue;
+}
+div.entities div.odd {
+    font-size: 1em;
+    background-color: lightslategray;
+}

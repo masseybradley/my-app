@@ -1,0 +1,35 @@
+<p>
+  dashboard works!
+</p>
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let version of listVersions(); let i=index" (click)="selectVersion(version)" class="version col-lg-4 col-md-6 col-xs-8 col-xs-offset-2 col-lg-offset-0 col-md-offset-0">
+      
+      <div *ngIf="i % 2 != 0" class="odd">
+        <p>{{i}} - {{version.date}}</p>
+      </div>
+      <div *ngIf="i % 2 == 0" class="even">
+        <p>{{i}} - {{version.date}}</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngIf="this.selectedVersions.length >= 1; let i=index">
+      <div *ngFor="let version of this.selectedVersions" class="selected-version col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+        <app-fsa-version [version]="version" (deselectVersion)="deselectVersion($event)"></app-fsa-version>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+    <hero-child *ngFor="let hero of heroes"
+      [hero]="hero"
+      [master]="master">
+    </hero-child>
+-->

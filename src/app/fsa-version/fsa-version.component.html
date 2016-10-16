@@ -1,0 +1,12 @@
+<div (click)="deselect(version)">
+  <p>{{version.date}}</p>
+</div>
+
+<div *ngFor="let entity of listEntitiesOfVersion(version.date); let i=index" class="entities">
+  <div *ngIf="i % 2 == 0" class="even">
+    <p>{{entity.name}} ({{entity.date}})</p>
+  </div>
+  <div *ngIf="i % 2 != 0" class="odd">
+    <p>{{entity.name}} ({{entity.date}})</p>
+  </div>
+</div>

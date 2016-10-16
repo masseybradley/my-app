@@ -1,0 +1,27 @@
+div.version {
+    color: white;
+    text-align: center;
+}
+
+div.even {
+    background-color: deepskyblue;
+}
+div.odd {
+    background-color: lightskyblue;
+}
+
+div.version div.selected-version {
+    background-color: yellow;
+}
+
+div.version div.even {
+    color: white;
+}
+div.version div.odd {
+    color: black;
+}
+
+div.selected-version {
+    background-color: darkslateblue;
+    color: black;
+}
