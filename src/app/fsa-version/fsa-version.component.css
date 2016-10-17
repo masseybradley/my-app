@@ -11,3 +11,8 @@ div.entities div.odd {
     font-size: 1em;
     background-color: lightslategray;
 }
+div.deselect-version {
+    background-color: purple;
+    padding: 1em;
+    
+}
